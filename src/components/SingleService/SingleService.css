@@ -1,0 +1,12 @@
+.service-img img {
+    width: 20rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.service-card {
+    border-radius: 5px;
+    width: 20rem;
+    /* border: 1px solid red; */
+}

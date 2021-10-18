@@ -1,0 +1,11 @@
+.service-parent{
+   display: flex;
+   justify-content:center;
+}
+.service-container{
+     width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(3,0.5fr);
+    justify-items: center;
+    grid-row-gap: 3rem;
+}
