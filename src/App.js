@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import AuthProvider from "./contexts/AuthProvider";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/service/:serviceId">
+          <PrivateRoute path="/service/:serviceId">
             <ServiceDetails></ServiceDetails>
-          </Route>
+          </PrivateRoute>
           <Route path="/about">
             <About></About>
           </Route>
