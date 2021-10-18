@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import useFirebase from "../../hooks/useFirebase";
 import logo from "../../logo.png";
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
+  console.log(user?.displayName, user?.email);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,6 +19,7 @@ const Header = () => {
           </div>
 
           <div className="other-links">
+            {/* collapsing hamburger Menu */}
             <button
               className="navbar-toggler"
               type="button"
@@ -26,6 +31,7 @@ const Header = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+            {/* hamburger menu end */}
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
                 <Link
@@ -41,14 +47,27 @@ const Header = () => {
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
-                <Link
-                  className="nav-link"
-                  to="/login"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Login
-                </Link>
+                {user?.displayName || user?.email ? (
+                  <p className="nav-link fw-bold">
+                    {user.displayName || user.email}
+                  </p>
+                ) : (
+                  <p className="nav-link fw-bold">not logged in</p>
+                )}
+                {user?.displayName || user?.email ? (
+                  <button onClick={logOut} className="btn btn-danger">
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    className="nav-link"
+                    to="/login"
+                    tabIndex="-1"
+                    aria-disabled="true"
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>

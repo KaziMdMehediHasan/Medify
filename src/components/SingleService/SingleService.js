@@ -5,6 +5,7 @@ import {
   faDollarSign,
   faHospitalUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const SingleService = (props) => {
   const { name, img, id, price } = props.service;
@@ -26,7 +27,9 @@ const SingleService = (props) => {
           <span className="text-success">{cost} </span>
           {price}
         </p>
-        <button className="btn btn-info fw-bold">View</button>
+        <Link to={`/service/${id}`}>
+          <button className="btn btn-info fw-bold">View</button>
+        </Link>
       </div>
     </div>
   );

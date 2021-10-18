@@ -1,0 +1,17 @@
+.detail-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .half-width{
+    width: 40%;
+} */
+
+.detail-img img{
+    width: 40rem;
+    border-radius: 10px;
+    object-fit: cover;
+}

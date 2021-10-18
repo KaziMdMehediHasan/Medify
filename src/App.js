@@ -6,29 +6,36 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
+import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import AuthProvider from "./contexts/AuthProvider";
 
 function App() {
   return (
-    <Router>
-      <Header></Header>
-      <Switch>
-        <Route path exact="/">
-          <Home></Home>
-        </Route>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path="/about">
-          <About></About>
-        </Route>
-        <Route path="/contact">
-          <Contact></Contact>
-        </Route>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route path exact="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/service/:serviceId">
+            <ServiceDetails></ServiceDetails>
+          </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
+          <Route path="/contact">
+            <Contact></Contact>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 
