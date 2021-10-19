@@ -35,19 +35,26 @@ const Header = () => {
             {/* hamburger menu end */}
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  to="/home"
-                >
+                <Link className="nav-link" aria-current="page" to="/home">
                   Home
                 </Link>
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
+                <Link className="nav-link" to="/appointment">
+                  Make an Appointment
+                </Link>
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
+                {/* conditional rendering  */}
+                {user?.email || user?.displayName ? (
+                  <img className="nav-link" src={user?.photoURL} alt="DP" />
+                ) : (
+                  ""
+                )}
+
+                {/* showing username or email */}
                 {user?.displayName || user?.email ? (
                   <p className="nav-link fw-bold">
                     {user.displayName || user.email}

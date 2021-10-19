@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "../Header/Header";
 import HomeServiceSection from "../HomeSericeSection/HomeServiceSection";
+import NewsLetter from "../NewsLetter/NewsLetter";
 import ServicesSection from "../ServicesSection/ServicesSection";
 import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homepage">
       <div className="home-banner d-flex justify-content-evenly align-items-center">
         <div className="info-container p-5">
           <h1 className="fw-bold">
@@ -26,6 +27,7 @@ const Home = () => {
       {/* services section */}
       <ServicesSection></ServicesSection>
       <HomeServiceSection></HomeServiceSection>
+      <NewsLetter></NewsLetter>
     </div>
   );
 };

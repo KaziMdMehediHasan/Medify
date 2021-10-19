@@ -1,0 +1,30 @@
+.parent-container{
+    margin-bottom: -50px;
+}
+.appointment{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.6)),url("../../images/appointment.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.appointment-form{
+    border-radius: 5px;
+    padding: 20px;
+    width: 40%;
+    background-color: rgb(238, 238, 238);
+}
+
+/* responsive styles */
+
+@media screen and (max-width: 688px) {
+    .appointment{
+        height: auto;
+    }    
+    .appointment-form{
+        width: 100%;
+    }
+}

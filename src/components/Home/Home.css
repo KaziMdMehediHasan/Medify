@@ -1,8 +1,7 @@
+.homepage{
+    margin-bottom: -50px;
+}
 .home-banner{
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6),
-    url('../../images/homepage-image.jpg')
-    ) !important; */
-
     background-image: linear-gradient(rgba(150, 245, 245, 0.205), rgba(0, 0, 0, 0.6)),url("../../images/homepage-image.jpg");
     height: 80vh;
     background-position: center;

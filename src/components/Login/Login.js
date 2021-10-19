@@ -19,6 +19,7 @@ const Login = () => {
     isLogin,
   } = useAuth();
 
+  console.log(user);
   // const location = useLocation();
   // console.log("came from", location.state?.from);
   // const history = useHistory();
