@@ -3,6 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="container p-5 my-5">
+      <h1 className="text-center mb-5">Stay In Touch</h1>
       {/* Material form contact  */}
       <div className="card">
         <h5 className="card-header info-color white-text text-center py-4">
@@ -65,16 +66,6 @@ const Contact = () => {
             </div>
 
             {/* Copy */}
-            <div className="form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="materialContactFormCopy"
-              />
-              {/* <label className="form-check-label" for="materialContactFormCopy">
-                Send me a copy of this message
-              </label> */}
-            </div>
 
             {/* Send button */}
             <button

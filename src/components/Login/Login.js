@@ -1,7 +1,8 @@
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { useHistory, useLocation } from "react-router";
+import { Link, useLocation, useHistory } from "react-router-dom";
+
 import useAuth from "../../hooks/useAuth";
 import useFirebase from "../../hooks/useFirebase";
 import "./Login.css";
@@ -19,11 +20,18 @@ const Login = () => {
   } = useAuth();
 
   // const location = useLocation();
+  // console.log("came from", location.state?.from);
   // const history = useHistory();
   // const redirect_uri = location.state?.from || "/home";
 
   // const handleGoogleLogin = () => {
   //   loginWithGoogle().then((result) => {
+  //     history.push(redirect_uri);
+  //   });
+  // };
+
+  // const handleEmailLogin = () => {
+  //   handleRegistration().then((result) => {
   //     history.push(redirect_uri);
   //   });
   // };
@@ -91,6 +99,7 @@ const Login = () => {
           )}
         </form>
         <h1>OR</h1>
+        {/* google div */}
         <div>
           <h1 className="text-center text-success">{googleIcon}</h1>
           <button

@@ -37,6 +37,7 @@ const useFirebase = () => {
   // google sign in
 
   const googleProvider = new GoogleAuthProvider();
+
   const loginWithGoogle = () => {
     return signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -80,6 +81,8 @@ const useFirebase = () => {
             console.log(error.message);
             setError(error.message);
           });
+
+    // clean the fields
   };
   //logout
 
