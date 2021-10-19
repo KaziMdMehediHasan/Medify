@@ -16,7 +16,7 @@ const SingleService = (props) => {
   const cost = <FontAwesomeIcon icon={faDollarSign} />;
   const calender = <FontAwesomeIcon icon={faCalendarWeek} />;
   return (
-    <div className="service-card shadow-lg">
+    <div className="service-card shadow">
       <div className="service-img">
         <img src={img} alt="service" />
       </div>

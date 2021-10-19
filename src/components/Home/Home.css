@@ -9,12 +9,29 @@
     background-repeat: no-repeat;
 }
 
+
 .home-banner h1{
     font-size: 3.5rem;
     color: rgb(255, 255, 255);
 }
 
-.home-banner span{
+.info-container{
+    width: 50%;
+}
 
+.home-banner span{
     color: rgb(0, 252, 155);
+}
+
+@media screen and (max-width:688px) {
+    .home-banner{
+        height: auto;
+        text-align: center;
+    }    
+    .info-container{
+    width: 100%;
+}
+    .home-banner h1{
+        text-align: center;
+    }    
 }

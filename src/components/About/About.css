@@ -17,3 +17,9 @@
     background-position: center;
     background-size: cover;
 }
+
+@media screen and (max-width: 688px) {
+    .half{
+        width: 90% !important;
+    }
+}

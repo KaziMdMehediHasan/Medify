@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <div className="footer-container p-5 mt-5">
       {/* logo and slogan */}
-      <div className="container d-flex justify-content-evenly">
+      <div className="container sub-footer-container d-flex justify-content-evenly flex-wrap">
         <div className="slogan">
           <img src={logo} alt="logo" />
           <p>

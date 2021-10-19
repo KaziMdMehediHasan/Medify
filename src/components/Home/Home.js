@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
+import HomeServiceSection from "../HomeSericeSection/HomeServiceSection";
 import ServicesSection from "../ServicesSection/ServicesSection";
 import "./Home.css";
 
@@ -7,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <div className="home-banner d-flex justify-content-evenly align-items-center">
-        <div className="w-50 p-5">
+        <div className="info-container p-5">
           <h1 className="fw-bold">
             Leading you to a <span className="text-gradient">Healthy</span> life
           </h1>
@@ -24,6 +25,7 @@ const Home = () => {
       </div>
       {/* services section */}
       <ServicesSection></ServicesSection>
+      <HomeServiceSection></HomeServiceSection>
     </div>
   );
 };
