@@ -1,6 +1,6 @@
-# Medify Live a Healthy Life
+# Medify-Live a Healthy Life
 
-Live site link [Create React App](https://medify-229f2.web.app/).
+Live site link [Click Here](https://medify-229f2.web.app/).
 
 ## Key Features
 *  A Medical Website.
