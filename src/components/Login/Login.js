@@ -1,6 +1,7 @@
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import useFirebase from "../../hooks/useFirebase";
 import "./Login.css";
@@ -16,6 +17,16 @@ const Login = () => {
     toggle,
     isLogin,
   } = useAuth();
+
+  // const location = useLocation();
+  // const history = useHistory();
+  // const redirect_uri = location.state?.from || "/home";
+
+  // const handleGoogleLogin = () => {
+  //   loginWithGoogle().then((result) => {
+  //     history.push(redirect_uri);
+  //   });
+  // };
 
   const googleIcon = <FontAwesomeIcon icon={faGoogle} />;
 

@@ -10,11 +10,12 @@ const Header = () => {
   console.log(user?.displayName, user?.email);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-gradient">
         <div className="container">
           <div className="brand">
             <Link className="navbar-brand" to="/home">
               <img src={logo} alt="brand" />
+              <h5 className="d-inline">Medify</h5>
             </Link>
           </div>
 

@@ -9,6 +9,7 @@ import Header from "./components/Header/Header";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Login></Login>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </AuthProvider>
   );
