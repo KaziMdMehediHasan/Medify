@@ -42,14 +42,18 @@ const Header = () => {
                   About
                 </Link>
                 <Link className="nav-link" to="/appointment">
-                  Make an Appointment
+                  Appointment
                 </Link>
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
                 {/* conditional rendering  */}
                 {user?.email || user?.displayName ? (
-                  <img className="nav-link" src={user?.photoURL} alt="DP" />
+                  <img
+                    className="nav-link user-img"
+                    src={user?.photoURL}
+                    alt="DP"
+                  />
                 ) : (
                   ""
                 )}
