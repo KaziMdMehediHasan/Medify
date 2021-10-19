@@ -10,7 +10,7 @@ import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Footer/Footer";
-
+import NotFound from "./components/NotFound/NotFound";
 function App() {
   return (
     <AuthProvider>
@@ -34,6 +34,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>
