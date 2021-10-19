@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   onAuthStateChanged,
 } from "firebase/auth";
+import { useHistory } from "react-router-dom";
 
 initializeAuthentication();
 const auth = getAuth();
@@ -19,6 +20,7 @@ const useFirebase = () => {
   const [isLogin, setLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const toggle = (e) => {
     setLogin(e.target.checked);
@@ -40,14 +42,15 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   const loginWithGoogle = () => {
-    return signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, googleProvider);
+    // .then((result) => {
+    //   const user = result.user;
+    //   setUser(user);
+    //   history.push("/");
+    // })
+    // .catch((error) => {
+    //   setError(error.message);
+    // });
   };
 
   //conditional function call

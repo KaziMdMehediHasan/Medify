@@ -20,16 +20,17 @@ const Login = () => {
   } = useAuth();
 
   console.log(user);
-  // const location = useLocation();
-  // console.log("came from", location.state?.from);
-  // const history = useHistory();
-  // const redirect_uri = location.state?.from || "/home";
 
-  // const handleGoogleLogin = () => {
-  //   loginWithGoogle().then((result) => {
-  //     history.push(redirect_uri);
-  //   });
-  // };
+  const location = useLocation();
+  console.log("came from", location.state?.from);
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
+
+  const handleGoogleLogin = () => {
+    loginWithGoogle().then((result) => {
+      history.push(redirect_uri);
+    });
+  };
 
   // const handleEmailLogin = () => {
   //   handleRegistration().then((result) => {
@@ -104,7 +105,7 @@ const Login = () => {
         <div>
           <h1 className="text-center text-success">{googleIcon}</h1>
           <button
-            onClick={loginWithGoogle}
+            onClick={handleGoogleLogin}
             className="btn btn-danger bg-gradient"
           >
             Sign in with Google
